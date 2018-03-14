@@ -2,6 +2,9 @@
   "name": "framework-eval",
   "version": "1.0.0",
   "description": "Evaluate Vue vs. React vs. Ember",
+  "engines": {
+    "node": "^8.0.0"
+  },
   "main": "app.js",
   "repository": "https://github.com/viewthespace/framework-eval",
   "author": "Kyle Holzinger <kylelholzinger@gmail.com>",
