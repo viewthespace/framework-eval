@@ -1,0 +1,26 @@
+{
+  "name": "framework-eval",
+  "version": "1.0.0",
+  "description": "Evaluate Vue vs. React vs. Ember",
+  "main": "app.js",
+  "repository": "https://github.com/viewthespace/framework-eval",
+  "author": "Kyle Holzinger <kylelholzinger@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "concurrently --kill-others-on-fail 'webpack-dev-server' 'yarn server'",
+    "server": "node app.js"
+
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-env": "^2.4.1",
+    "babel-loader": "^7.1.4",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
+  }
+}
