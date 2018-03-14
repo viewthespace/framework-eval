@@ -6,10 +6,7 @@ const app = express()
 app.use(logger('dev'))
 
 app.get('/api/some-resource', function(req, res) {
-  res.json({
-    a: 1,
-    b: 2,
-  })
+  res.json(require('./data-set.json'))
 })
 
 app.use('/', express.static('public'))
