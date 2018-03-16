@@ -43,6 +43,7 @@ module.exports = {
       '@components': path.resolve(path.join(__dirname, 'src', 'javascripts', 'components')),
       '@reducers': path.resolve(path.join(__dirname, 'src', 'javascripts', 'reducers')),
       '@actions': path.resolve(path.join(__dirname, 'src', 'javascripts', 'actions')),
+      'vue': 'vue/dist/vue.js'
     },
     extensions: ['.js', '.json', '.vue'],
   },
