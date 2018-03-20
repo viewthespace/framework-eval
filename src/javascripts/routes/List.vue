@@ -11,6 +11,7 @@ export default {
       title: 'Some List of Things'
     }
   },
+
   props: ['data-set']
 }
 </script>

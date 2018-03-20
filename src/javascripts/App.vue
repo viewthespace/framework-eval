@@ -2,10 +2,11 @@
   <div class='app'>
     <h1>Data table</h1>
     <vts-table class='some-table' :config='config' empty-message='No people were found matching that criteria'>
-      <vts-table-row :key='column.title' v-for='column in tableData'>
-        <vts-cell :value='column.name' />
-        <vts-cell :value='column.height' />
-        <vts-cell :value='column.age' />
+      <!-- this @click.native is weird. don't want to have to add a modifier to click handlers. -->
+      <vts-table-row :key='user.title' v-for='(user, index) in users' @click.native='openUserForm(index, user)'>
+        <vts-cell :value='user.name' />
+        <vts-cell :value='user.height' />
+        <vts-cell :value='user.age' />
       </vts-table-row>
     </vts-table>
 
@@ -22,13 +23,14 @@
 </template>
 
 <script>
-import List from './List'
-import VtsTable from './components/Table'
-import VtsTableRow from './components/Table/VtsTableRow'
-import VtsCell from './components/Table/VtsCell'
+import List from '@routes/List'
+import VtsTable from '@components/Table'
+import VtsTableRow from '@components/Table/VtsTableRow'
+import VtsCell from '@components/Table/VtsCell'
 
 export default {
   name: 'app',
+
   components: {
     List,
     VtsTable,
@@ -39,13 +41,13 @@ export default {
   created() {
     fetch('/api/some-resource')
       .then(res => res.json())
-      .then(json => (this.tableData = json))
+      .then(json => (this.users = json))
   },
 
   data() {
     return {
       dataSource: [1, 2, 3],
-      tableData: [],
+      users: [],
       config: {
         columns: [
           { width: 5, title: 'name' },
@@ -53,6 +55,12 @@ export default {
           { width: 3, title: 'age' }
         ]
       }
+    }
+  },
+  
+  methods: {
+    openUserForm(index, user) {
+      this.$router.push({ path: `/user/${index}` })
     }
   }
 }
