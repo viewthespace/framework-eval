@@ -1,0 +1,6 @@
+<div class="table">
+  <div class="table-head">
+    <div class="table-header" *ngFor="let column of config.columns">{{ column.title }}</div>
+  </div>
+  <ng-content></ng-content>
+</div>
