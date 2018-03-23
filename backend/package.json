@@ -11,7 +11,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "concurrently --kill-others-on-fail 'webpack-dev-server' 'yarn server'",
+    "start": "yarn server",
     "server": "node app.js"
 
   },
