@@ -15,8 +15,6 @@ type ArrayConfig = {
   templateUrl: './vts-table.component.html',
   styleUrls: ['./vts-table.component.css']
 })
-export class VtsTableComponent implements OnInit {
+export class VtsTableComponent {
   @Input() config: TableConfig
-
-  ngOnInit() {}
 }

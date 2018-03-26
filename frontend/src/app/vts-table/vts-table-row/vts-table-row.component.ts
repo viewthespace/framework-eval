@@ -5,6 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './vts-table-row.component.html',
   styleUrls: ['./vts-table-row.component.css']
 })
-export class VtsTableRowComponent implements OnInit {
+export class VtsTableRowComponent {
   ngOnInit() {}
 }

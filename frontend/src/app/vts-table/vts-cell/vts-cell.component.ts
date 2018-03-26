@@ -5,8 +5,6 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './vts-cell.component.html',
   styleUrls: ['./vts-cell.component.css']
 })
-export class VtsCellComponent implements OnInit {
+export class VtsCellComponent {
   @Input() ngModel: String
-
-  ngOnInit() {}
 }
