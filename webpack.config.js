@@ -19,7 +19,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         loaders: ['babel-loader'],
         include: path.join(__dirname, 'src', 'javascripts'),
       },
@@ -28,8 +28,8 @@ module.exports = {
   resolve: {
     alias: {
       '@components': path.resolve(path.join(__dirname, 'src', 'javascripts', 'components')),
-      '@reducers': path.resolve(path.join(__dirname, 'src', 'javascripts', 'reducers')),
-      '@actions': path.resolve(path.join(__dirname, 'src', 'javascripts', 'actions')),
+      '@styles': path.resolve(path.join(__dirname, 'src', 'javascripts', 'styles'))
     },
+    extensions: ['.jsx', '.js', '.json']
   },
 }
