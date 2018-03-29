@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import VtsTable from '@components/vts-table'
-import VtsTableRow from '@components/vts-table/vts-table-row'
-import VtsCell from '@components/vts-table/vts-cell'
+import VtsTable from '@components/VtsTable'
+import VtsTableRow from '@components/VtsTable/VtsTableRow'
+import VtsCell from '@components/VtsTable/VtsCell'
 
 export default class UserList extends Component {
   render() {
