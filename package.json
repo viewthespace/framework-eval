@@ -19,12 +19,15 @@
     "babel-env": "^2.4.1",
     "babel-loader": "^7.1.4",
     "concurrently": "^3.5.1",
+    "css-loader": "^0.28.11",
     "express": "^4.16.3",
     "morgan": "^1.9.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "style-loader": "^0.20.3",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.12",
+    "webpack-combine-loaders": "^2.0.3",
     "webpack-dev-server": "^3.1.1"
   }
 }

@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var combineLoaders = require('webpack-combine-loaders')
 
 var BUILD_DIR = path.resolve(__dirname, 'public')
 var APP_DIR = path.resolve(__dirname, 'src')
@@ -23,6 +24,20 @@ module.exports = {
         loaders: ['babel-loader'],
         include: path.join(__dirname, 'src', 'javascripts'),
       },
+      {
+        test: /\.css$/,
+        loader: combineLoaders([
+          {
+            loader: 'style-loader'
+          }, {
+            loader: 'css-loader',
+            query: {
+              modules: true,
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
+          }
+        ])
+      }
     ],
   },
   resolve: {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import CellStyles from '@styles/vts-cell'
+import CellStyles from '@styles/CellStyles.css'
 
 export default class VtsTable extends Component {
   render() {
@@ -7,7 +7,7 @@ export default class VtsTable extends Component {
       <div className="table">
         <div className="table-header">
           {this.props.config.columns.map(column => (
-            <div className="table-head" style={CellStyles}>{column.title}</div>
+            <div className={CellStyles['table-cell']}>{column.title}</div>
           ))}
         </div>
         {this.props.children}

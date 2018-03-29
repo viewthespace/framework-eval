@@ -1,0 +1,7 @@
+.table-row {
+  width: 500px;
+  cursor: pointer;
+}
+.table-row:hover {
+  background-color: lightgray;
+}
