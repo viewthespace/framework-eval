@@ -18,7 +18,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <UserList users={this.state.users} />
+        <UserList users={this.state.users} history={this.props.history} />
       </div>
     )
   }
