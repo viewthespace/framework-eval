@@ -1,0 +1,11 @@
+{{#vts-table}}
+  <div>Hello, world!</div>
+  {{#each users as |user|}}
+  <div {{action "openUser" user.name}}>
+    {{#vts-table-row}}
+      {{vts-cell data=user.name}}
+      {{vts-cell data=user.height}}
+    {{/vts-table-row}}
+    </div>
+  {{/each}}
+{{/vts-table}}

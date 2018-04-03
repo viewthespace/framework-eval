@@ -1,0 +1,15 @@
+<div>
+  <table>
+    <thead>
+      {{#each model.config.columns as |column|}}
+        <th align="left" width="200px">{{column.title}}</th>
+      {{/each}}
+    </thead>
+    {{#each model.users as |user|}}
+      <tr>
+        <td>{{user.name}}</td>
+        <td>{{user.height}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</div>

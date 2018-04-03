@@ -1,0 +1,13 @@
+.table-cell {
+  display: inline-block;
+  width: 200px;
+}
+
+.table-row {
+  width: 500px;
+}
+
+.table-row:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}

@@ -6,6 +6,7 @@ const app = express()
 app.use(logger('dev'))
 
 app.get('/api/some-resource', function(req, res) {
+  res.header('Access-Control-Allow-origin', '*')
   res.json(require('./data-set.json'))
 })
 
