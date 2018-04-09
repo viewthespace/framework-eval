@@ -1,0 +1,18 @@
+import { Component, OnInit } from "@angular/core";
+
+@Component({
+  selector: "app-button",
+  templateUrl: "./button.component.html",
+  styleUrls: ["./button.component.scss"]
+})
+export class ButtonComponent implements OnInit {
+  buttonName: string = "name";
+
+  constructor() {}
+
+  ngOnInit() {}
+
+  handleClick(e) {
+    console.log(e);
+  }
+}
